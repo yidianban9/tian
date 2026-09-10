@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 让页面在各类移动设备上以正确宽度渲染 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="简约风格个人名片">
+    <title>林默 | 视觉设计师</title>
+    <!-- HTML 结构与 CSS 样式分离：样式统一放在外部样式表 style.css 中 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 页面主容器：利用 flex 让名片在视口中水平、垂直居中 -->
+    <main class="page-wrapper">
+        <!-- 个人名片主体：圆角卡片 + 柔和阴影，整体呈简约卡片式布局 -->
+        <article class="business-card" aria-labelledby="profile-name">
+
+            <!-- 圆形头像：纯文字实现、不依赖外链图片；若需替换为照片，
+                 可在下方 img 标签上使用 class="avatar" 并配合 object-fit 裁剪 -->
+            <div class="avatar" role="img" aria-label="林默的文字头像">林默</div>
+
+            <!-- 个人基本信息：姓名与职位 -->
+            <div class="profile-info">
+                <p class="eyebrow">HELLO, I'M</p>
+                <h1 id="profile-name">林默</h1>
+                <p class="job-title">视觉设计师 · 独立创作者</p>
+            </div>
+
+            <!-- 联系方式：使用 <address> 语义标签，取消默认斜体后以竖向列表展示 -->
+            <address class="contact-list">
+                <!-- 邮箱联系方式 -->
+                <a href="mailto:linmo@example.com">
+                    <span class="contact-icon" aria-hidden="true">@</span>
+                    <span>linmo@example.com</span>
+                </a>
+                <!-- 联系电话联系方式 -->
+                <a href="tel:+8613800138000">
+                    <span class="contact-icon" aria-hidden="true">☎</span>
+                    <span>+86 138 0013 8000</span>
+                </a>
+                <!-- 所在地联系方式 -->
+                <a href="https://maps.google.com/?q=Shanghai" target="_blank" rel="noreferrer">
+                    <span class="contact-icon" aria-hidden="true">⌖</span>
+                    <span>中国 · 上海</span>
+                </a>
+            </address>
+        </article>
+    </main>
+</body>
+</html>
